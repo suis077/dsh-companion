@@ -2,7 +2,7 @@
   "name": "dsh-persona-card",
   "version": "0.2.0",
   "type": "module",
-  "description": "DeepSeek Harness 插件：把角色人设自动注入会话，带跨会话记忆、好感度与情绪，让 AI 角色在多轮对话里逐渐成长 | A DeepSeek Harness plugin for persistent AI personas with cross-session memory, affinity and mood",
+  "description": "DeepSeek Harness plugin for persistent AI personas with cross-session memory, affinity and mood. Inject a role persona into every session and let it grow across conversations.",
   "keywords": [
     "dsh",
     "dsh-plugin",
@@ -13,10 +13,7 @@
     "memory",
     "affinity",
     "ai-companion",
-    "whale",
-    "聊天机器人",
-    "人设",
-    "记忆"
+    "whale"
   ],
   "repository": {
     "type": "git",
@@ -36,7 +33,7 @@
   ],
   "dsh": {
     "category": "extension",
-    "displayName": "人设卡",
+    "displayName": "Persona Card",
     "bundle": {
       "patch": "./cordis.patch.yml"
     },
