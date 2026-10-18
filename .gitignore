@@ -1,0 +1,13 @@
+# Local delivery/rollback notes: absolute paths and account info. Never commit.
+DELIVERY.md
+
+# Runtime data, generated per user.
+node_modules/
+*.log
+
+# Off-directory memory backups (personal conversation summaries). Never commit.
+persona-memory-backups/
+
+# Editor and OS noise.
+.DS_Store
+Thumbs.db

@@ -1,0 +1,35 @@
+{
+  "name": "dsh-persona-card",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "人设卡：把角色人设自动注入 DSH 会话的系统提示，新会话不用再手打人设；带浮层面板，可切换卡片、单独关闭某个会话。",
+  "keywords": ["dsh", "dsh-plugin", "deepseek-harness", "persona", "roleplay"],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "lib",
+    "client",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "dsh": {
+    "category": "extension",
+    "displayName": "人设卡",
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime"
+      ]
+    }
+  },
+  "license": "MIT"
+}
