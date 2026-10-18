@@ -1,8 +1,8 @@
-# dsh-persona-card bundle patch.
+﻿# dsh-companion bundle patch.
 #
 # One additive `insert` row. The Host half registers a system-prompt section
 # through the official `systemPrompt` service; the Client half (added in a
 # later step) draws the card panel.
 - insert:
     - id: persona-card
-      name: 'dsh-persona-card'
+      name: 'dsh-companion'

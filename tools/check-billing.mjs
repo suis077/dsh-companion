@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Offline checks for the billing split (credits vs money).
  *
  * The load-bearing properties:
@@ -20,7 +20,7 @@ function check (label, ok, detail) {
   console.log(`  FAIL  ${label}${detail === undefined ? '' : ` — ${detail}`}`)
 }
 
-console.log('dsh-persona-card billing-split check\n')
+console.log('dsh-companion billing-split check\n')
 
 // ------------------------------------------------------------ classification
 console.log('classification')

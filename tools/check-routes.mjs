@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Offline checks for step 4: the panel's routes and — most importantly — the
  * trust fence that keeps a shell-equipped model from bypassing the approval
  * gate by POSTing the route directly.
@@ -24,7 +24,7 @@ function check (label, ok, detail) {
 }
 
 const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'persona-routes-'))
-console.log(`dsh-persona-card route check\nworkdir: ${tmp}\n`)
+console.log(`dsh-companion route check\nworkdir: ${tmp}\n`)
 
 /** Fake request: a stream plus headers/method/url. */
 function fakeRequest ({ method = 'GET', url = '/', headers = {}, body } = {}) {

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Offline checks for the credit-multiplier resolver.
  *
  * This is the module that decides whether a credit figure is trustworthy, so the
@@ -21,7 +21,7 @@ function check (label, ok, detail) {
   console.log(`  FAIL  ${label}${detail === undefined ? '' : ` — ${detail}`}`)
 }
 
-console.log('dsh-persona-card multiplier check\n')
+console.log('dsh-companion multiplier check\n')
 
 // ---------------------------------------------------------------- origin
 console.log('origin selection')

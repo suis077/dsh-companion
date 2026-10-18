@@ -1,5 +1,5 @@
 ﻿/**
- * Offline checks for dsh-persona-card step 2: the card store and the Host
+ * Offline checks for dsh-companion step 2: the card store and the Host
  * plugin's rendering.
  *
  * Runs against a throwaway store under the OS temp dir — it never reads or
@@ -21,7 +21,7 @@ function check (label, ok, detail) {
 }
 
 const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'persona-check-'))
-console.log(`dsh-persona-card card-store check\nworkdir: ${tmp}\n`)
+console.log(`dsh-companion card-store check\nworkdir: ${tmp}\n`)
 
 try {
   // ---------- validation ----------

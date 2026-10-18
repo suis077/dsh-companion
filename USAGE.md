@@ -1,4 +1,4 @@
-# dsh-persona-card 使用教程
+﻿# dsh-companion 使用教程
 
 一个给 **DeepSeek Harness（DSH）** 的插件：把「角色人设」自动注入会话，并给角色配上**跨会话记忆 + 好感度**，让 AI 角色在多轮对话里逐渐"长成自己"。
 
@@ -20,7 +20,7 @@
 2. 点 **Add plugin**，填本仓库的地址：
 
    ```
-   https://github.com/suis077/dsh-persona-card.git
+   https://github.com/suis077/dsh-companion.git
    ```
 
    或者填本地绝对路径（如果你已经 clone 到本地）。

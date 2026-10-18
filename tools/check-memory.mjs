@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Offline checks for step M1: the persona memory store.
  *
  * The load-bearing properties:
@@ -31,7 +31,7 @@ function check (label, ok, detail) {
 }
 
 const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'persona-memory-'))
-console.log(`dsh-persona-card memory-store check\nworkdir: ${tmp}\n`)
+console.log(`dsh-companion memory-store check\nworkdir: ${tmp}\n`)
 
 try {
   // ------------------------------------------------------------ shape

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Offline checks for step 6: the ledger reader and card attribution.
  *
  * Two things matter here and both are tested:
@@ -21,7 +21,7 @@ function check (label, ok, detail) {
 }
 
 const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'persona-usage-'))
-console.log(`dsh-persona-card usage check\nworkdir: ${tmp}\n`)
+console.log(`dsh-companion usage check\nworkdir: ${tmp}\n`)
 
 /** A ledger shaped exactly like the real one (fields verified against the live file). */
 function ledgerFixture (dayList, eventList) {

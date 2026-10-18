@@ -1,5 +1,5 @@
-/**
- * Run every offline check for dsh-persona-card.
+﻿/**
+ * Run every offline check for dsh-companion.
  *
  * Usage: node tools/check-all.mjs
  *        node tools/check-all.mjs --no-live   # skip the live-prompt checks

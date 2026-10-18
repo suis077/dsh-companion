@@ -1,4 +1,4 @@
-# dsh-persona-card（人设卡）
+﻿# dsh-companion（人设卡）
 
 把角色人设**自动注入** DSH 会话的系统提示：新开一个会话，不用再把那一大段人设重新粘贴一遍。
 
@@ -157,7 +157,7 @@
 ## 目录结构
 
 ```text
-dsh-persona-card/
+dsh-companion/
 ├── package.json          # bundle 元数据 + dsh.client 前端声明
 ├── cordis.patch.yml      # 挂载声明（一条 insert）
 ├── index.js              # Host 侧：提示段 + persona_card 工具 + 面板路由

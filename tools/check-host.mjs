@@ -1,5 +1,5 @@
-/**
- * Offline check for dsh-persona-card's Host *registration surface*.
+﻿/**
+ * Offline check for dsh-companion's Host *registration surface*.
  *
  * Simulates the three services the plugin asks for — `systemPrompt`, `tools`,
  * `webServer` — and asserts the plugin registers exactly one prompt section,
@@ -19,7 +19,7 @@ function check (label, ok, detail) {
   console.log(`  FAIL  ${label}${detail === undefined ? '' : ` — ${detail}`}`)
 }
 
-console.log('dsh-persona-card host registration check\n')
+console.log('dsh-companion host registration check\n')
 
 // ---- fake services --------------------------------------------------------
 const sections = []
@@ -54,7 +54,7 @@ const ctx = {
 apply(ctx, { storeDir: process.env.PERSONA_TEST_DIR })
 
 console.log('registration')
-check('export name is the package name', name === 'dsh-persona-card', String(name))
+check('export name is the package name', name === 'dsh-companion', String(name))
 check('asks for systemPrompt', injections.some((d) => Array.isArray(d) && d.includes('systemPrompt')), JSON.stringify(injections))
 check('asks for tools', injections.some((d) => Array.isArray(d) && d.includes('tools')), JSON.stringify(injections))
 check('asks for webServer', injections.some((d) => Array.isArray(d) && d.includes('webServer')), JSON.stringify(injections))
@@ -62,7 +62,7 @@ check('asks for webServer', injections.some((d) => Array.isArray(d) && d.include
 // routes. The assertion is about DISPOSABILITY, not the count — a registration
 // that cannot be torn down leaks across reloads.
 check('every registration goes through a disposable effect', effectLabels.length === 4, JSON.stringify(effectLabels))
-check('labelled effects for diagnosis', effectLabels.every((l) => typeof l === 'string' && l.includes('dsh-persona-card')), JSON.stringify(effectLabels))
+check('labelled effects for diagnosis', effectLabels.every((l) => typeof l === 'string' && l.includes('dsh-companion')), JSON.stringify(effectLabels))
 
 console.log('\nprompt sections')
 // Two sections now, on purpose: the card itself, plus the rules that govern what

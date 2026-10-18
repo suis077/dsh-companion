@@ -1,5 +1,5 @@
-/**
- * dsh-persona-card — Host half.
+﻿/**
+ * dsh-companion — Host half.
  *
  * Registers ONE system-prompt section through the official `systemPrompt`
  * service, plus one model tool that reads/writes THIS session's override.
@@ -247,7 +247,7 @@ export function apply (ctx, config = {}) {
       }
       return undefined
     },
-    log: (m) => ctx.logger?.warn?.(`dsh-persona-card: ${m}`),
+    log: (m) => ctx.logger?.warn?.(`dsh-companion: ${m}`),
   })
 
   // Live per-session billing accumulators, fed from the session event stream.
@@ -359,9 +359,9 @@ export function apply (ctx, config = {}) {
         try { off?.() } catch {}
         try { offDisposed?.() } catch {}
       }
-    }, 'dsh-persona-card: billing stream')
+    }, 'dsh-companion: billing stream')
   } catch (err) {
-    ctx.logger?.warn?.(`dsh-persona-card: 无法订阅计费事件：${String(err?.message ?? err)}`)
+    ctx.logger?.warn?.(`dsh-companion: 无法订阅计费事件：${String(err?.message ?? err)}`)
   }
 
   // ------------------------------------------------------ memory auto-backup
@@ -385,16 +385,16 @@ export function apply (ctx, config = {}) {
       const timer = setTimeout(() => {
         try {
           const r = memories.backupTo(memoryBackupDir, { keep: MEMORY_BACKUP_KEEP })
-          if (!r.ok) ctx.logger?.warn?.(`dsh-persona-card: 启动补备份失败：${r.problem}`)
+          if (!r.ok) ctx.logger?.warn?.(`dsh-companion: 启动补备份失败：${r.problem}`)
         } catch (err) {
-          ctx.logger?.warn?.(`dsh-persona-card: 启动补备份异常：${String(err?.message ?? err)}`)
+          ctx.logger?.warn?.(`dsh-companion: 启动补备份异常：${String(err?.message ?? err)}`)
         }
       }, MEMORY_STARTUP_BACKUP_DELAY_MS)
       if (typeof timer.unref === 'function') timer.unref()
       return () => clearTimeout(timer)
-    }, 'dsh-persona-card: memory startup backup')
+    }, 'dsh-companion: memory startup backup')
   } catch (err) {
-    ctx.logger?.warn?.(`dsh-persona-card: 无法安排启动补备份：${String(err?.message ?? err)}`)
+    ctx.logger?.warn?.(`dsh-companion: 无法安排启动补备份：${String(err?.message ?? err)}`)
   }
 
   // ------------------------------------------------------- prompt section
@@ -428,7 +428,7 @@ export function apply (ctx, config = {}) {
             return renderCard(resolved.card, memoryText)
           },
         }),
-      'dsh-persona-card: prompt section',
+      'dsh-companion: prompt section',
     )
 
     // The memory RULES ride in their own section, right after the card.
@@ -449,7 +449,7 @@ export function apply (ctx, config = {}) {
           order: MEMORY_RULES_ORDER,
           text: (context) => renderMemoryRules(resolveFor(context).card !== undefined),
         }),
-      'dsh-persona-card: memory rules',
+      'dsh-companion: memory rules',
     )
   })
 
@@ -461,7 +461,7 @@ export function apply (ctx, config = {}) {
     const definition = {
       name: TOOL_NAME,
       description:
-        '人设卡：查看或调整「本会话」的人设注入。人设卡由 dsh-persona-card 插件注入到系统提示里。' +
+        '人设卡：查看或调整「本会话」的人设注入。人设卡由 dsh-companion 插件注入到系统提示里。' +
         'action=status 查看本会话当前生效的卡与来源；action=off 让本会话不再注入人设（其它会话不受影响）；' +
         'action=on 恢复跟随全局选中的卡；action=use 用 cardId 为本会话指定一张卡；action=clear 清除本会话的设置。' +
         '写操作立即生效，不需要重启。',
@@ -802,7 +802,7 @@ export function apply (ctx, config = {}) {
       },
     }
 
-    toolsCtx.effect(() => tools.register(definition), 'dsh-persona-card: persona_card tool')
+    toolsCtx.effect(() => tools.register(definition), 'dsh-companion: persona_card tool')
   })
 
   // --------------------------------------------------------------- routes
@@ -1114,9 +1114,9 @@ export function apply (ctx, config = {}) {
             }
           },
         }),
-      'dsh-persona-card: panel routes',
+      'dsh-companion: panel routes',
     )
   })
 }
 
-export const name = 'dsh-persona-card'
+export const name = 'dsh-companion'

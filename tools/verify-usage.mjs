@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Reconcile this plugin's ledger figures against the whale's OWN file.
  *
  * This reads the real `$DSH_HOME/.dshw-usage.json`, computes the summary through
@@ -20,7 +20,7 @@ function check (label, ok, detail) {
   console.log(`  FAIL  ${label}${detail === undefined ? '' : ` — ${detail}`}`)
 }
 
-console.log('dsh-persona-card ledger reconciliation\n')
+console.log('dsh-companion ledger reconciliation\n')
 console.log(`ledger file: ${ledgerFile()}`)
 
 const read = readLedger()

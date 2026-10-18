@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Offline checks for step 3: per-session overrides, the resolution rule, and
  * the Host plugin's tool.
  *
@@ -22,7 +22,7 @@ function check (label, ok, detail) {
 }
 
 const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'persona-sessions-'))
-console.log(`dsh-persona-card session-override check\nworkdir: ${tmp}\n`)
+console.log(`dsh-companion session-override check\nworkdir: ${tmp}\n`)
 
 try {
   // ---------------------- override normalisation ----------------------

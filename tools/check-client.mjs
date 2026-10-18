@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Structural check for the Client half.
  *
  * There is no browser under test here, so this does NOT prove the panel renders.
@@ -32,7 +32,7 @@ const HERE = import.meta.dirname
 const CLIENT = path.join(HERE, '..', 'client', 'client.js')
 const MANIFEST = path.join(HERE, '..', 'package.json')
 
-console.log('dsh-persona-card client check\n')
+console.log('dsh-companion client check\n')
 
 const manifest = JSON.parse(fs.readFileSync(MANIFEST, 'utf8'))
 const source = fs.readFileSync(CLIENT, 'utf8')

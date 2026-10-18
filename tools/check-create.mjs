@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Offline checks for the card-creation and whale-sync tool actions.
  *
  * These exercise the real tool body, so the asset validation rules, the id
@@ -21,7 +21,7 @@ function check (label, ok, detail) {
 }
 
 const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'persona-create-'))
-console.log(`dsh-persona-card create/sync check\nworkdir: ${tmp}\n`)
+console.log(`dsh-companion create/sync check\nworkdir: ${tmp}\n`)
 
 // Captured before the try so the finally block can always restore it.
 const realHome = process.env.DSH_HOME

@@ -1,5 +1,5 @@
-/**
- * dsh-persona-card — Client half.
+﻿/**
+ * dsh-companion — Client half.
  *
  * Draws a floating persona-card panel into `shell.overlay`, the same slot the
  * TODO board uses. Rendered with React from the browser module table; no
@@ -12,7 +12,7 @@
  * `POST /persona-card/set`. Both live in lib/index.js's route table.
  */
 window.__ModuleLoader__.load({
-  id: 'dsh-persona-card',
+  id: 'dsh-companion',
   factory (require) {
     const React = require('react')
     const h = React.createElement

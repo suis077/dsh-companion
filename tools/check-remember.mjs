@@ -21,7 +21,7 @@ function check (label, ok, detail) {
 }
 
 const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'persona-remember-'))
-console.log(`dsh-persona-card memory-actions check\nworkdir: ${tmp}\n`)
+console.log(`dsh-companion memory-actions check\nworkdir: ${tmp}\n`)
 
 const realHome = process.env.DSH_HOME
 try {

@@ -23,7 +23,7 @@ function check (label, ok, detail) {
 }
 
 const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'persona-whale-'))
-console.log(`dsh-persona-card whale-bridge check\nworkdir: ${tmp}\n`)
+console.log(`dsh-companion whale-bridge check\nworkdir: ${tmp}\n`)
 
 /** Write a 1x1 PNG header so a "real" image file exists. */
 function fakeImage (file, bytes = 64) {
