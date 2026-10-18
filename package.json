@@ -1,10 +1,27 @@
 {
   "name": "dsh-persona-card",
   "version": "0.2.0",
-  "private": true,
   "type": "module",
-  "description": "人设卡：把角色人设自动注入 DSH 会话的系统提示，新会话不用再手打人设；带浮层面板，可切换卡片、单独关闭某个会话。",
-  "keywords": ["dsh", "dsh-plugin", "deepseek-harness", "persona", "roleplay"],
+  "description": "DeepSeek Harness 插件：把角色人设自动注入会话，带跨会话记忆、好感度与情绪，让 AI 角色在多轮对话里逐渐成长 | A DeepSeek Harness plugin for persistent AI personas with cross-session memory, affinity and mood",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "persona",
+    "roleplay",
+    "character",
+    "memory",
+    "affinity",
+    "ai-companion",
+    "whale",
+    "聊天机器人",
+    "人设",
+    "记忆"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suis077/dsh-persona-card.git"
+  },
   "exports": {
     ".": "./index.js",
     "./client": "./client/client.js",
